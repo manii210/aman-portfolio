@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Globe, MessageSquare } from "lucide-react";
 import { useInView } from "../hooks/useInView";
 
 const EMAILJS_SERVICE_ID = "service_ky4pwde";
@@ -180,25 +180,28 @@ export function Contact() {
               })}
             </div>
 
-            {/* Social Links (placeholder) */}
+            {/* Social Links */}
             <div>
               <h4 className="text-lg text-white mb-4">Connect With Me</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: Github, color: "from-gray-600 to-slate-600" },
-                  { icon: Linkedin, color: "from-blue-600 to-blue-700" },
-                  { icon: Twitter, color: "from-cyan-500 to-blue-500" },
+                  { icon: Github, color: "from-gray-600 to-slate-600", href: "https://github.com/manii210/aman-portfolio" },
+                  { icon: Linkedin, color: "from-blue-600 to-blue-700", href: "https://www.linkedin.com/in/aman-e-rome-59b7252b0" },
+                  { icon: Globe, color: "from-purple-600 to-pink-600", href: "https://aman-portfolio-eosin-ten.vercel.app/" },
                 ].map((social, index) => {
                   const Icon = social.icon;
                   return (
-                    <motion.div
+                    <motion.a
                       key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
                       whileHover={{ scale: 1.2, rotate: 360 }}
                       whileTap={{ scale: 0.9 }}
-                      className={`p-4 bg-gradient-to-br ${social.color} rounded-xl cursor-pointer`}
+                      className={`p-4 bg-gradient-to-br ${social.color} rounded-xl cursor-pointer transition-all hover:shadow-lg`}
                     >
                       <Icon className="w-6 h-6 text-white" />
-                    </motion.div>
+                    </motion.a>
                   );
                 })}
               </div>
@@ -288,9 +291,6 @@ export function Contact() {
         >
           <p className="text-gray-500">
             © 2026 Aman E Rome. Available for full-time or project-based opportunities.
-          </p>
-          <p className="text-sm text-gray-600 mt-2">
-            Built with React, Tailwind CSS, and Motion
           </p>
         </motion.div>
       </div>

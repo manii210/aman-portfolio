@@ -110,6 +110,15 @@ const PROJECTS = [
     gradient: "135deg, #7c3aed, #2563eb",
     icon: "🔍",
   },
+  {
+    title: "AKDiagPro",
+    description: "Full-stack automotive diagnostics platform with e-learning, e-commerce, premium video streaming, admin dashboard, and secure user authentication.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "PostgreSQL", "Prisma", "Supabase"],
+    badge: "Live", badgeColor: "#3b82f6",
+    impact: "Deployed on server and handed over to client",
+    gradient: "135deg, #0ea5e9, #0284c7",
+    icon: "🚗",
+  },
 ];
 
 const SKILLS = [

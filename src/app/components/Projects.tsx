@@ -43,6 +43,16 @@ const projects = [
     status: "In Development",
     impact: "Revolutionary forensic tool",
   },
+  {
+    title: "AKDiagPro",
+    description:
+      "Full-stack e-learning and e-commerce platform for automotive diagnostics. Enables purchasing diagnostic tools, enrolling in training courses, premium video streaming, and secure user/admin management.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Supabase"],
+    icon: ExternalLink,
+    gradient: "from-slate-600 to-sky-600",
+    status: "Live",
+    impact: "Deployed and handed over to client",
+  },
 ];
 
 export function Projects() {
